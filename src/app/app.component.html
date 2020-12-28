@@ -1,4 +1,35 @@
-<app-orbit-list [satellites]="sourceList"></app-orbit-list>
+
+<!-- <app-orbit-list [satellites]="sourceList"></app-orbit-list> -->
+
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
+
+<div class="search-form">
+  <!-- <form>
+    <label (keyup.enter) = 'search(searchTerm.value)'>"search me"</label>
+  </form> -->
+  <input (keyup.enter) = 'search(searchTerm.value)'><!-- <input type="text" name="user"> -->  <!-- Self closing tag -->
+  <button (click) = 'search(searchTerm.value)'>search</button>
+  <!-- <label (keyup.enter) = 'search(searchTerm.value)'>eatme</label> -->
+  
+</div>
+
+
+
+<!-- EXAMPLE form code -->
+<!-- <form action="http://www.foo.com" method="GET">
+  <div>
+    <label for="say">What greeting do you want to say?</label>
+    <input name="say" id="say" value="Hi">
+  </div>
+  <div>
+    <label for="to">Who do you want to say it to?</label>
+    <input name="to" id="to" value="Mom">
+  </div>
+  <div>
+    <button>Send my greetings</button>
+  </div>
+</form> -->
+
 
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <div style="text-align:center">
