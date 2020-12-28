@@ -11,12 +11,12 @@ import { Satellite } from './satellite';
 export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
-  displayList: Satellite[];
+  displayList: Satellite[];  //added searching-7
   
   constructor() {
     this.sourceList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json';
-    this.displayList = []
+    this.displayList = []    //added searching-7
  
     window.fetch(satellitesUrl).then(function(response) {
        response.json().then(function(data) {
@@ -52,6 +52,29 @@ export class AppComponent {
 
 }
 
+// Filter function per w3schools.com
+
+// function myFunction() {
+//   // Declare variables
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("myTable");
+//   tr = table.getElementsByTagName("tr");
+
+//   // Loop through all table rows, and hide those who don't match the search query
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[0];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//   }
+// }
 
 
 
